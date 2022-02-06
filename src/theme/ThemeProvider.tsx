@@ -18,9 +18,18 @@ const colors = {
   },
 };
 
+const fontSizes = {
+  text: {
+    heading: "36px",
+    label: "16px",
+    body: "16px",
+  },
+};
+
 const theme = extendTheme({
   config,
   colors,
+  fontSizes,
 });
 
 export function ThemeProvider({ children }: Props) {

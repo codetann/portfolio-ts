@@ -8,7 +8,6 @@ const styles: StackProps = {
   as: "section",
   w: "full",
   maxW: "4xl",
-  pb: "6rem",
   align: "center",
   spacing: 0,
 };

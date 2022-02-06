@@ -1,11 +1,12 @@
 import { Layout } from "@components";
-import { Hero, Skills } from "@sections";
+import { Hero, Skills, Experience } from "@sections";
 
 function App() {
   return (
     <Layout>
       <Hero />
       <Skills />
+      <Experience />
     </Layout>
   );
 }

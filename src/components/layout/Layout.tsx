@@ -8,7 +8,7 @@ const styles: StackProps = {
   bg: "bg.primary",
   justify: "start",
   align: "center",
-  spacing: "2rem",
+  spacing: "8rem",
   minH: "100vh",
   maxW: "100vw",
   as: "main",
