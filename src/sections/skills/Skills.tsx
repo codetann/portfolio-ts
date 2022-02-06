@@ -7,9 +7,9 @@ import { HStack, Text, VStack } from "@chakra-ui/react";
 const styles: Styles = {
   iconRow: {
     w: "100%",
-    maxW: "4xl",
+    maxW: "3xl",
     justify: "space-between",
-    fontSize: "34px",
+    fontSize: "28px",
   },
   iconContainer: (isHovered: boolean, color: string) => ({
     color: isHovered ? color : "whiteAlpha.400",
