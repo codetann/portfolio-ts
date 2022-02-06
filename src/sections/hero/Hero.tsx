@@ -11,6 +11,7 @@ import {
 import { Section, Spacer, CodeDisplay } from "@components";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTypeWriter } from "src/hooks/useTypeWriter"; // TODO add to tsconfig path
 import { FaRegEnvelope, FaArrowDown } from "react-icons/fa";
 
 // types
@@ -32,6 +33,7 @@ const styles: Styles = {
   },
   heading: {
     as: "h1",
+    display: "flex",
     lineHeight: "60px",
     fontWeight: "black",
     letterSpacing: "-1.5px",
@@ -54,11 +56,17 @@ const styles: Styles = {
   },
 };
 
+const words = ["a developer.", "a photographer.", "Tanner!"];
+
 // components
 export function Hero({}: Props) {
+  const TypeWriter = useTypeWriter(words);
   return (
     <Section>
-      <Heading {...styles.heading}>Hello, I'm Tanner!</Heading>
+      <Heading {...styles.heading}>
+        Hello, I'm&#160;
+        {TypeWriter}
+      </Heading>
       <Spacer amount={2} />
       <Text {...styles.text}>
         I'm a self-taught frontend developer based in Salt Lake City, Utah. My
@@ -71,30 +79,10 @@ export function Hero({}: Props) {
         <ResumeButton />
       </HStack>
       <Spacer amount={4} />
-      <CodeDisplay text="" />
+      <CodeDisplay text={TypeWriter} />
     </Section>
   );
 }
-
-// const MotionButton = ({
-//   css,
-//   icon,
-//   children,
-// }: {
-//   css: ButtonProps;
-//   icon: JSX.Element;
-//   children: any;
-// }) => {
-//   const [isHovered, setIsHovered] = useState(false);
-//   <Button
-//     {...styles.button}
-//     {...css}
-//     onMouseEnter={() => setIsHovered(true)}
-//     onMouseLeave={() => setIsHovered(false)}
-//   >
-//     {children}
-//   </Button>;
-// };
 
 const ContactButton = () => {
   const [isHovered, setIsHovered] = useState(false);

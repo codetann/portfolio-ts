@@ -70,7 +70,7 @@ const LineNumbers = ({ length }: { length: number }) => {
   );
 };
 
-export function CodeDisplay({ text }: { text: string }) {
+export function CodeDisplay({ text }: { text: any }) {
   return (
     <VStack
       bg="#0F1629"
