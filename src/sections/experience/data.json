@@ -9,5 +9,16 @@
       "Developed and maintained the front-end of the Impact Suite platform, which is used by the Impact Suite team to manage and analyze data from the Impact Suite platform."
     ],
     "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQE0XkwMQKI9Cw/company-logo_200_200/0/1595453107511?e=2159024400&v=beta&t=F-XKB96X3D82FtizHoyS4QsjRQsu1kwAsvqw18n7i8M"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Freelance",
+    "dates": "January 2016 - Present",
+    "descriptions": [
+      "Worked with a wide variety of technologies, including HTML, CSS, JavaScript, jQuery, Bootstrap, AngularJS, Node.js, Express, MongoDB, and MySQL.",
+      "Core team member of a team that developed a web application for a client to manage their data.",
+      "Managed a team of developers to develop a web application for a client to manage their data."
+    ],
+    "logo": ""
   }
 ]

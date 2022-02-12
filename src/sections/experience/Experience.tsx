@@ -1,6 +1,6 @@
-import { Section, Spacer } from "@components";
+import { Section, Spacer, SectionHeader } from "@components";
 import { FaBriefcase } from "react-icons/fa";
-import SectionHeader from "src/components/layout/SectionHeader";
+
 import {
   Image,
   Text,
@@ -16,6 +16,11 @@ import {
 import { IoMdArrowDropright } from "react-icons/io";
 import jobs from "./data.json";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+/*
+TODO : refactor code
+ */
 
 type Props = {};
 
@@ -96,7 +101,12 @@ const JobTabs = ({ jobs }: any) => {
     <VStack>
       <HStack>
         {jobs.map((job: Job, index: number) => (
-          <Button key={index} onClick={() => setActiveTab(index)}>
+          <Button
+            key={index}
+            onClick={() => setActiveTab(index)}
+            size="sm"
+            bg={index === activeTab ? "blue.400" : "none"}
+          >
             {job.company}
           </Button>
         ))}
@@ -119,26 +129,32 @@ const JobTabs = ({ jobs }: any) => {
 };
 
 const JobCard = ({ title, company, dates, descriptions, logo }: Job) => (
-  <VStack {...styles.jobCard}>
-    <Image {...styles.jobLogo} src={logo} />
-    <HStack pb=".2rem" pt="1rem">
-      <Heading fontSize="2xl">{title}</Heading>
-      <Heading {...styles.jobTitle}>{`@ ${company}`}</Heading>
-    </HStack>
-    <Text {...styles.jobDates}>{dates}</Text>
-    {descriptions.map((description, index) => (
-      <Text
-        key={index}
-        fontSize="14px"
-        display="flex"
-        color="whiteAlpha.800"
-        pb=".5rem"
-      >
-        <chakra.span color="blue.400" fontSize="lg">
-          <IoMdArrowDropright />
-        </chakra.span>
-        {description}
-      </Text>
-    ))}
-  </VStack>
+  <motion.div
+    initial={{ opacity: 0, y: 200 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -100 }}
+  >
+    <VStack {...styles.jobCard}>
+      <Image {...styles.jobLogo} src={logo} />
+      <HStack pb=".2rem" pt="1rem">
+        <Heading fontSize="2xl">{title}</Heading>
+        <Heading {...styles.jobTitle}>{`@ ${company}`}</Heading>
+      </HStack>
+      <Text {...styles.jobDates}>{dates}</Text>
+      {descriptions.map((description, index) => (
+        <Text
+          key={index}
+          fontSize="14px"
+          display="flex"
+          color="whiteAlpha.800"
+          pb=".5rem"
+        >
+          <chakra.span color="blue.400" fontSize="lg">
+            <IoMdArrowDropright />
+          </chakra.span>
+          {description}
+        </Text>
+      ))}
+    </VStack>
+  </motion.div>
 );

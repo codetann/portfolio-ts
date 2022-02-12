@@ -52,7 +52,7 @@ const styles: Styles = {
   },
 };
 
-export default function SectionHeader({ icon, color, label, heading }: Props) {
+export function SectionHeader({ icon, color, label, heading }: Props) {
   return (
     <VStack {...styles.sectionHeader}>
       <HeaderIcon icon={icon} color={color} />
