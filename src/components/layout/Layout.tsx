@@ -12,7 +12,7 @@ const styles: StackProps = {
   minH: "100vh",
   maxW: "100vw",
   as: "main",
-  px: "1ren",
+  px: "1rem",
   w: "100%",
 };
 

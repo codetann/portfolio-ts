@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { icons } from "./icons";
 import { motion } from "framer-motion";
-import { Styles, IconProps } from "./skills";
+import { Styles, IconProps } from "./types";
 import { HStack, Text, VStack } from "@chakra-ui/react";
 
 const styles: Styles = {
@@ -10,6 +10,7 @@ const styles: Styles = {
     maxW: "3xl",
     justify: "space-between",
     fontSize: "28px",
+    wrap: "wrap",
   },
   iconContainer: (isHovered: boolean, color: string) => ({
     color: isHovered ? color : "whiteAlpha.400",

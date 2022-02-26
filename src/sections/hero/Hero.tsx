@@ -37,6 +37,7 @@ const styles: Styles = {
     lineHeight: "60px",
     fontWeight: "black",
     letterSpacing: "-1.5px",
+    marginTop: "10rem",
     fontSize: ["48px", "60px"],
   },
   buttonText: {

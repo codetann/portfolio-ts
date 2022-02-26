@@ -6,7 +6,7 @@ type Props = {
 
 const styles: StackProps = {
   as: "section",
-  w: "full",
+  w: "100%",
   maxW: "4xl",
   align: "center",
   spacing: 0,
